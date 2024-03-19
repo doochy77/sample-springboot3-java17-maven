@@ -83,7 +83,7 @@ public class MemberController {
         @ApiResponse(responseCode = "200", description = "OK", useReturnTypeSchema = true),
     })
     @Operation(summary = "회원 전체 조회2")
-    @GetMapping
+    @GetMapping("/find2")
     public List<MemberRspDto> findAllMembers2() {
         return memberService.findAllMembers();
     }
