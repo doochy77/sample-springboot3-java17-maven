@@ -79,4 +79,13 @@ public class MemberController {
         return memberService.deleteMember(id);
     }
 
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "OK", useReturnTypeSchema = true),
+    })
+    @Operation(summary = "회원 전체 조회2")
+    @GetMapping
+    public List<MemberRspDto> findAllMembers2() {
+        return memberService.findAllMembers();
+    }
+
 }
